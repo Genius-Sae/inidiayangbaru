@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Space Memory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="stars"></div>
+
+<!-- ENTRANCE -->
+<div class="center" id="home">
+    <h1>🚀 Ruang Kenangan</h1>
+    <p>Klik untuk memulai perjalanan</p>
+    <button class="btn" onclick="start()">Mulai</button>
+</div>
+
+<!-- MAIN -->
+<div class="center" id="main" style="display:none">
+
+    <div class="nav">
+        <button onclick="show('music')">🎵</button>
+        <button onclick="show('album')">📸</button>
+    </div>
+
+    <!-- MUSIC -->
+    <div class="card active" id="music">
+        <h2>Playlist</h2>
+        <audio id="audio" src="lagu.mp3"></audio>
+
+        <div class="controls">
+            <button onclick="play()">▶</button>
+            <button onclick="pause()">⏸</button>
+        </div>
+    </div>
+
+    <!-- ALBUM -->
+    <div class="card" id="album">
+        <h2>Album Foto</h2>
+
+        <div class="slider">
+            <img id="img" src="foto1.jpg">
+        </div>
+
+        <div class="controls">
+            <button onclick="prev()">⬅</button>
+            <button onclick="next()">➡</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- BLUR + TEXT -->
+<div class="blur" id="blur">
+    <div class="typing" id="text"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
